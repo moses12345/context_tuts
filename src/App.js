@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Component from './componentssss.js';
+import Setcompo from './Setcompo'
+import { Using_provider } from './context/context_thing'
+import { useState } from 'react'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const a="cool"
+  const b=10
+  const [posting, setposting] = useState("")
+	return (
+		<div className='App'>
+			<h1>hello this is react</h1>
+			<Using_provider value = {{posting , setposting}}>
+				<Component />
+				<Setcompo />
+			</Using_provider>
+		</div>
+	);
 }
-
 export default App;
